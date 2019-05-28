@@ -11,4 +11,15 @@ const BookType = new GraphQLObjectType({
 	})
 });
 
-const RootQuery = new GraphQLObjectType({});
+const RootQuery = new GraphQLObjectType({
+	name: 'RootQueryType',
+	fields: () => ({
+		book: {
+			type: BookType,
+			args: { id: { type: GraphQLString } },
+			resolve(parent, args) {
+				// Code to get data from db / other source.
+			}
+		}
+	})
+});
