@@ -25,7 +25,12 @@ const BookType = new GraphQLObjectType({
 	})
 });
 
-const AuthorType = new GraphQLObjectType({});
+const AuthorType = new GraphQLObjectType({
+	name: 'Author',
+	fields: () => ({
+		id: { type: GraphQLID }
+	})
+});
 
 const RootQuery = new GraphQLObjectType({
 	name: 'RootQueryType',
