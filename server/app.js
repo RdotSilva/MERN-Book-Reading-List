@@ -5,6 +5,11 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+//connect to mLab database
+mongoose.connect(
+	'mongodb+srv://ryan:<test123>@gql-booklist-x9opl.mongodb.net/test?retryWrites=true&w=majority'
+);
+
 //Middleware
 app.use(
 	'/graphql',
