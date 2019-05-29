@@ -15,7 +15,6 @@ var authors = [
 	{ name: 'Brandon Sanderson', age: 42, id: '2' },
 	{ name: 'Terry Pratchett', age: 66, id: '3' }
 ];
-s;
 
 const BookType = new GraphQLObjectType({
 	name: 'Book',
@@ -25,6 +24,8 @@ const BookType = new GraphQLObjectType({
 		genre: { type: GraphQLString }
 	})
 });
+
+const AuthorType = new GraphQLObjectType({});
 
 const RootQuery = new GraphQLObjectType({
 	name: 'RootQueryType',
