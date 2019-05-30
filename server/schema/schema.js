@@ -105,11 +105,21 @@ const Mutation = new GraphQLObjectType({
 			args: {
 				name: { type: GraphQLString },
 				age: { type: GraphQLInt }
+			},
+			resolve(parent, args) {
+				// author is now a new object based on the Author Schema created in author.js
+				let author = new Author({
+					name: args.name,
+					age: args.age
+				});
+				// Save to mongoDB
+				author.save();
 			}
 		}
 	}
 });
 
 module.exports = new GraphQLSchema({
-	query: RootQuery
+	query: RootQuery,
+	mutation: Mutation
 });
