@@ -113,7 +113,7 @@ const Mutation = new GraphQLObjectType({
 					age: args.age
 				});
 				// Save to mongoDB
-				author.save();
+				return author.save();
 			}
 		}
 	}
