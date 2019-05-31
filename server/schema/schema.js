@@ -1,9 +1,9 @@
-const graphql = require('graphql');
-const _ = require('lodash');
+const graphql = require("graphql");
+const _ = require("lodash");
 
 // Import models
-const Book = require('../models/book');
-const Author = require('../models/author');
+const Book = require("../models/book");
+const Author = require("../models/author");
 
 const {
 	GraphQLID,
@@ -31,7 +31,7 @@ const {
 // ];
 
 const BookType = new GraphQLObjectType({
-	name: 'Book',
+	name: "Book",
 	fields: () => ({
 		id: { type: GraphQLID },
 		name: { type: GraphQLString },
@@ -47,7 +47,7 @@ const BookType = new GraphQLObjectType({
 });
 
 const AuthorType = new GraphQLObjectType({
-	name: 'Author',
+	name: "Author",
 	fields: () => ({
 		id: { type: GraphQLID },
 		name: { type: GraphQLString },
@@ -63,7 +63,7 @@ const AuthorType = new GraphQLObjectType({
 });
 
 const RootQuery = new GraphQLObjectType({
-	name: 'RootQueryType',
+	name: "RootQueryType",
 	fields: () => ({
 		book: {
 			type: BookType,
@@ -98,7 +98,7 @@ const RootQuery = new GraphQLObjectType({
 });
 
 const Mutation = new GraphQLObjectType({
-	name: 'Mutation',
+	name: "Mutation",
 	fields: {
 		addAuthor: {
 			type: AuthorType,
@@ -114,6 +114,14 @@ const Mutation = new GraphQLObjectType({
 				});
 				// Save to mongoDB
 				return author.save();
+			}
+		},
+		addBook: {
+			type: BookType,
+			args: {
+				name: { type: GraphQLString },
+				genre: { type: GraphQLString },
+				authorId: { type: GraphQLID }
 			}
 		}
 	}
