@@ -10,3 +10,13 @@ const getAuthorsQuery = gql`
 		}
 	}
 `;
+
+class AddBook extends Component {
+	render() {
+		return (
+		
+		);
+	}
+}
+
+export default graphql(getAuthorsQuery)(AddBook);
