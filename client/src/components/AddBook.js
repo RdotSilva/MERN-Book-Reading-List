@@ -26,14 +26,14 @@ class AddBook extends Component {
 		});
 	}
 
-	submitForm(e) {
-		e.preventDefault;
+	submitForm = e => {
+		e.preventDefault();
 		console.log(this.state);
-	}
+	};
 
 	render() {
 		return (
-			<form id="add-book" onSubmit={this.submitForm.bind(this)}>
+			<form id="add-book" onSubmit={this.submitForm}>
 				<div className="field">
 					<label>Book name:</label>
 					<input
