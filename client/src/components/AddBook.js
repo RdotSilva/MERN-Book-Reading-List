@@ -14,7 +14,6 @@ class AddBook extends Component {
 
 	displayAuthors() {
 		const data = this.props.getAuthorsQuery;
-		console.log(this.props);
 		if (data.loading) {
 			return <option disabled>Loading Authors</option>;
 		}
@@ -29,7 +28,7 @@ class AddBook extends Component {
 
 	submitForm = e => {
 		e.preventDefault();
-		console.log(this.state);
+		this.props.addBookMutation();
 	};
 
 	render() {
