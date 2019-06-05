@@ -26,6 +26,11 @@ class AddBook extends Component {
 		});
 	}
 
+	submitForm(e) {
+		e.preventDefault;
+		console.log(this.state);
+	}
+
 	render() {
 		return (
 			<form id="add-book" onSubmit={this.onSubmitForm.bind(this)}>
