@@ -33,7 +33,7 @@ class AddBook extends Component {
 
 	render() {
 		return (
-			<form id="add-book" onSubmit={this.onSubmitForm.bind(this)}>
+			<form id="add-book" onSubmit={this.SubmitForm.bind(this)}>
 				<div className="field">
 					<label>Book name:</label>
 					<input
