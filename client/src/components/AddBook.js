@@ -5,6 +5,11 @@ import { getAuthorsQuery } from "../queries/queries";
 class AddBook extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			name: "",
+			genre: "",
+			authorId: ""
+		};
 	}
 
 	displayAuthors() {
