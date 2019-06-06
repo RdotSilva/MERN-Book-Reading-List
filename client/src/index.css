@@ -1,6 +1,6 @@
 body {
 	background: #eee;
-	font-family: "Roboto", sans-serif;
+	font-family: "Nunito SemiBold";
 }
 
 #main h1 {
@@ -25,7 +25,7 @@ body {
 	padding: 10px;
 	border-radius: 4px;
 	border: 1px solid #880e4f;
-	box-shadow: 1px 2px 3px rgba(0, 0, 0.3);
+	box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
 	cursor: pointer;
 	color: #880e4f;
 }
@@ -41,7 +41,7 @@ form {
 
 form .field {
 	display: grid;
-	grid-template-columns: 1fr, 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-gap: 10px;
 }
 
@@ -50,16 +50,17 @@ form label {
 	padding: 6px;
 }
 
-form select,
-form input {
-	margin: 4px;
+form input,
+form select {
+	margin: 4px 0;
 	padding: 6px;
 	box-sizing: border-box;
 }
+
 form button {
-	color: white;
+	color: #fff;
 	font-size: 2em;
-	background: #ad1f57;
+	background: #ad1457;
 	border: 0;
 	padding: 0 10px;
 	border-radius: 50%;
@@ -67,4 +68,18 @@ form button {
 	position: absolute;
 	bottom: 10px;
 	left: 10px;
+}
+
+#book-details {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 40%;
+	height: 100%;
+	background: #ad1457;
+	padding: 30px;
+	overflow: auto;
+	box-shadow: -2px -3px 5px rgba(0, 0, 0, 0.3);
+	box-sizing: border-box;
+	color: #fff;
 }
