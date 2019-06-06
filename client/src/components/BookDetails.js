@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { graphql } from "react-apollo";
-// import { getBooksQuery } from "../queries/queries";
+import { getBookQuery } from "../queries/queries";
 
 class BookDetails extends Component {
 	render() {
@@ -11,3 +11,5 @@ class BookDetails extends Component {
 		);
 	}
 }
+
+export default graphql(getBookQuery)(BookDetails);

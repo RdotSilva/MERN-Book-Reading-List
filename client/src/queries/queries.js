@@ -46,4 +46,4 @@ const getBookQuery = gql`
 	}
 `;
 
-export { getAuthorsQuery, getBooksQuery, addBookMutation };
+export { getAuthorsQuery, getBooksQuery, addBookMutation, getBookQuery };
