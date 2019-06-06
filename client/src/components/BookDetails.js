@@ -4,6 +4,7 @@ import { getBookQuery } from "../queries/queries";
 
 class BookDetails extends Component {
 	render() {
+		console.log(this.props.bookId);
 		return (
 			<div id="book-details">
 				<p>Output book details here</p>
