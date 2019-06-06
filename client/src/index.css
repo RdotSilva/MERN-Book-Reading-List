@@ -2,3 +2,15 @@ body {
 	background: #eee;
 	font-family: "Roboto", sans-serif;
 }
+
+#main h1 {
+	color: #444;
+	text-align: center;
+}
+
+#main {
+	padding: 0px;
+	box-sizing: border-box;
+	width: 60%;
+	height: 100%;
+}
